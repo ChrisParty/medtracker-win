@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medtracker-win"
+version = "0.1.0"
+description = "Offline medical‑exam tracker for Windows (Greek UI)"
+authors = [{name = "ChrisParty", email = "you@example.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.10"
+readme = "README.md"
+
+dependencies = [
+    "PySide6~=6.7",
+    "SQLAlchemy>=2.0",
+    "alembic",
+    "bcrypt",
+    "pandas",
+    "matplotlib",
+    "reportlab",
+    "qtawesome",
+    # OCR extra
+]
+
+[project.optional-dependencies]
+ocr = ["pytesseract", "pillow"]        # εγκαθίσταται με  pip install .[ocr]
+dev = ["pytest", "pyinstaller"]        # μόνο για develop/build
+
+[project.scripts]
+medtracker = "app.__main__:main"       #  ➜  η εντολή που δημιουργεί ο pip/pipx

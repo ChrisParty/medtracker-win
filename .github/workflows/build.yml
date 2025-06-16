@@ -1,0 +1,27 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  win-build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install build deps
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install .[dev]
+      - name: Build EXE
+        run: |
+          pyinstaller --noconfirm --onefile -n MedTracker medtracker/__main__.py
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MedTracker_EXE
+          path: dist/MedTracker.exe
