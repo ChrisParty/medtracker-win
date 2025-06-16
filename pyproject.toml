@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "medtracker-win"
+name = "medtracker"
 version = "0.1.0"
 description = "Offline medical‑exam tracker for Windows (Greek UI)"
 authors = [{name = "ChrisParty", email = "you@example.com"}]

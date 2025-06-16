@@ -1,0 +1,37 @@
+[
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "init_data_dir",
+        "kind": 2,
+        "importPath": "medtracker.util.paths",
+        "description": "medtracker.util.paths",
+        "peekOfCode": "def init_data_dir() -> None:\n    (DATA_DIR / \"attachments\").mkdir(parents=True, exist_ok=True)\n    (DATA_DIR / \"exports\").mkdir(exist_ok=True)",
+        "detail": "medtracker.util.paths",
+        "documentation": {}
+    },
+    {
+        "label": "APP_NAME",
+        "kind": 5,
+        "importPath": "medtracker.util.paths",
+        "description": "medtracker.util.paths",
+        "peekOfCode": "APP_NAME = \"MedTracker\"\nDATA_DIR = Path.home() / f\".{APP_NAME.lower()}\"\ndef init_data_dir() -> None:\n    (DATA_DIR / \"attachments\").mkdir(parents=True, exist_ok=True)\n    (DATA_DIR / \"exports\").mkdir(exist_ok=True)",
+        "detail": "medtracker.util.paths",
+        "documentation": {}
+    },
+    {
+        "label": "DATA_DIR",
+        "kind": 5,
+        "importPath": "medtracker.util.paths",
+        "description": "medtracker.util.paths",
+        "peekOfCode": "DATA_DIR = Path.home() / f\".{APP_NAME.lower()}\"\ndef init_data_dir() -> None:\n    (DATA_DIR / \"attachments\").mkdir(parents=True, exist_ok=True)\n    (DATA_DIR / \"exports\").mkdir(exist_ok=True)",
+        "detail": "medtracker.util.paths",
+        "documentation": {}
+    }
+]
